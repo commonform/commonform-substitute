@@ -1,0 +1,15 @@
+{
+  "name": "commonform-substitute",
+  "description": "substitute terms and headings in Common Forms",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "devDependencies": {
+    "defence-cli": "^2.0.1",
+    "replace-require-self": "^1.1.1"
+  },
+  "license": "Apache-2.0",
+  "repository": "commonform/commonform-substitute",
+  "scripts": {
+    "test": "defence -i javascript README.md | replace-require-self | node"
+  }
+}
