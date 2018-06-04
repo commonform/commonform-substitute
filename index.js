@@ -22,13 +22,17 @@ function recurse (form, headings, terms) {
     ) {
       return {reference: headings[element.reference]}
     } else if (element.hasOwnProperty('form')) {
-      if (
-        element.hasOwnProperty('heading') &&
-        headings[element.heading]
-      ) {
-        return {
-          heading: headings[element.heading],
-          form: recurse(element.form, headings, terms)
+      if (element.hasOwnProperty('heading')) {
+        if (headings[element.heading]) {
+          return {
+            heading: headings[element.heading],
+            form: recurse(element.form, headings, terms)
+          }
+        } else {
+          return {
+            heading: element.heading,
+            form: recurse(element.form, headings, terms)
+          }
         }
       } else {
         return {

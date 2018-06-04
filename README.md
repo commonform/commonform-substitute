@@ -15,6 +15,7 @@ assert.deepEqual(
           }
         },
         {
+          heading: 'Rock',
           form: {
             content: [
               {use: 'Apple'},
@@ -37,6 +38,7 @@ assert.deepEqual(
         }
       },
       {
+        heading: 'Rock',
         form: {
           content: [
             {use: 'Orange'},
