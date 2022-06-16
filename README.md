@@ -11,7 +11,10 @@ assert.deepEqual(
         {
           heading: 'Banana',
           form: {
-            content: [{definition: 'Apple'}]
+            content: [
+              {definition: 'Apple'},
+              {blank: ''}
+            ]
           }
         },
         {
@@ -19,14 +22,16 @@ assert.deepEqual(
           form: {
             content: [
               {use: 'Apple'},
-              {reference: 'Banana'}
+              {reference: 'Banana'},
+              {blank: ''}
             ]
           }
         }
       ]
     }, {
       terms: {'Apple': 'Orange'},
-      headings: {'Banana': 'Pear'}
+      headings: {'Banana': 'Pear'},
+      blanks: {'2': 'Watermelon'}
     }
   ),
   {
@@ -34,7 +39,10 @@ assert.deepEqual(
       {
         heading: 'Pear',
         form: {
-          content: [{definition: 'Orange'}]
+          content: [
+            {definition: 'Orange'},
+            {blank: ''}
+          ]
         }
       },
       {
@@ -42,7 +50,8 @@ assert.deepEqual(
         form: {
           content: [
             {use: 'Orange'},
-            {reference: 'Pear'}
+            {reference: 'Pear'},
+            'Watermelon'
           ]
         }
       }
